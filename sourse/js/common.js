@@ -1,8 +1,8 @@
 const JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
-	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
+	menuMobile: document.querySelector(".menu-wrap"),
+	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-wrap ul li a")),
 
 	modalCall() {
 
@@ -26,7 +26,7 @@ const JSCCommon = {
 					// ZOOM: "Zoom"
 				},
 			},
-			eforeLoad: function () {
+			beforeLoad: function () {
 				document.querySelector("html").classList.add("fixed")
 			},
 			afterClose: function () {
@@ -92,7 +92,7 @@ const JSCCommon = {
 		if (this.menuMobileLink) {
 			this.toggleMenu();
 			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
+				let container = event.target.closest(".menu-wrap.active"); // (1)
 				if (!container) {
 					this.closeMenu();
 				}
@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = 'main.png';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}

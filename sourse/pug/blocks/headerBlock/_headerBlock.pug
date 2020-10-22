@@ -2,9 +2,19 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			h1 Конструктор планеров
+			+e.text Создай свой планер (ежедневник) на&nbsp;пружине за&nbsp;1290&nbsp;₽ исходя из&nbsp;своих задач и&nbsp;добивайся результатов быстрее!
 
 			.row
-						
+				mixin item(i, t)
+					+e.col.col-md-3.col-sm-6
+						+e.step= `шаг ${i}`
+						+e.title= t
+						+e.img-wrap
+							+pic(`head-img-${i}.png`,'',0)
+				+item(`1`,`Обложка`,``)
+				+item(`2`,`Интерактивный блок`,``)
+				+item(`3`,`Блок планирования`,``)
+				+item(`4`,`Вспомогательный блок`,``)
+			+e.footer Выбери интересующий блок нажатием на кнопку «Выбрать». Чтобы перейти к следующему шагу, нажми кнопку «Далее».
 	// end headerBlock

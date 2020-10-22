@@ -22,6 +22,22 @@ mixin top-nav()
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row
+				.col-md-auto.col
+					a(href="/")
+						img.res-i(src="img/svg/logo.svg", alt="")
+				.col-md.order-md-0.order-last
+					.menu-wrap
+						.container
+							+mnu()
+				.col-auto
+					+e.btn-basket(href="#")
+						+e.SPAN.text.d-none.d-lg-block Корзина
+						+e.icon-wrap
+							+icon('basket')
+							+e.count 2
+				.col-auto.d-md-none
+					+b.toggle-menu-mobile--js.d-md-none
+						span
 					
 	// end top-nav

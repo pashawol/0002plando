@@ -1,0 +1,27 @@
+mixin sSteps(data)
+	// start sSteps
+	+b.SECTION.sSteps.section#sSteps&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 #[span.text-primary Шаг 1:] Выбери обложку
+				
+			.row
+				mixin item(i,t)
+					.col-lg-4.col-sm-6
+						+b.step-item
+							+e.img-wrap
+								+pic(`step-1-${i}.png`,'',0)
+							+e.title= t
+							+e.btn(href="#") Выбрать
+							a.link(href="#") Подробнее
+					// /.col-lg-4.col-sm-6
+				+item('1', 'Обложка "Light blue"')
+				+item('2', 'Обложка "Light blue" тут пример на две строки')
+				+item('3', 'Обложка "Light blue"')
+				+item('3', 'Обложка "Light blue"')
+				+item('1', 'Обложка "Light blue"')
+				+item('2', 'Обложка "Light blue" тут пример  ')
+				+item('2', 'Обложка "Light blue" тут пример на две строки')
+				+item('3', 'Обложка "Light blue"')
+				+item('3', 'Обложка "Light blue"')
+	// end sSteps

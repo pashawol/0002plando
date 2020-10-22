@@ -1,7 +1,39 @@
 .footer {
 		
+	margin-top: auto;
+	background: #3FA5AA;
+	padding: rem(30) 0;
+	.navMenu__link{
+		color: #ffffff !important;
+		padding-left: 0;
+	}
+	.row{
+		// align-items: center;
+	}
+	.btn{
+		@include media-breakpoint-up(md) {
 
+			width: rem(140);
+		}
+		width: rem(120);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&__copy{
+		@include media-breakpoint-up(md) {
 
+			text-align: center;
+		}
+			color: rgba(255, 255, 255, 0.6);
+
+	}
+	.navMenu{
+		justify-content: center;
+	}
+	.soc{
+		padding-top: rem(10);
+	}
 // 
 @include media-breakpoint-up(xl) {}
 
@@ -35,7 +67,11 @@
 
 @include media-breakpoint-down(lg) {}
 
-@include media-breakpoint-down(md) {}
+@include media-breakpoint-down(md) {
+	.soc{
+		justify-content: flex-end;
+	}
+}
 
 @include media-breakpoint-down(sm) {}
 

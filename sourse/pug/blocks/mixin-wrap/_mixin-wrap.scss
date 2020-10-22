@@ -9,6 +9,16 @@
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		@extend .btn-outline-l;
+		box-sizing: border-box;
+		border-radius: 10px;
+		height: rem(47);
+		width: rem(47);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: #ffffff;
 		&:hover{
 		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			opacity: .6 ;
@@ -16,7 +26,7 @@
 		
 	}
 	.icon{
-	font-size: rem(30);
+	font-size: rem(22);
 	}
 	 
 
