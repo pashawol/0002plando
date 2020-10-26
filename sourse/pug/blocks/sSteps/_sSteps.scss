@@ -2,6 +2,26 @@
 	// start .sSteps
 	.sSteps {
 		--sPT:0;
+
+
+		&--03{
+			@include media-breakpoint-up(md){
+				--sPT: #{rem(80)};
+				--sPB: #{rem(100)};
+			}
+			--sPT: #{rem(50)};
+			--sPB: #{rem(40)};
+		}
+		p{
+			font-weight: 300;
+			font-size: rem(18);
+			line-height: (29 / 18);
+		}
+		h4{
+			font-weight: 600;
+			line-height: (28 / 24);
+			margin-bottom: rem(27);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -23,6 +43,10 @@
 	--mb: #{rem(80)};
 	min-height: calc(100% - var(--mb) );
 	margin-bottom: var(--mb);
+	&--03{
+		--mb: #{rem(50)};
+		margin-bottom: var(--mb);
+	}
 	picture{
 		position: relative;
 		// display: block;
@@ -38,6 +62,9 @@
 	}
 	&__img-wrap{
 		margin-bottom: rem(18);
+		&--03{
+			margin-bottom: 52px;
+		}
 	}
 	&__title{
 		margin-bottom: rem(17);

@@ -1,0 +1,11 @@
+mixin sBeforeOrder(data)
+	// start sBeforeOrder
+	+b.SECTION.sBeforeOrder.section#sBeforeOrder&attributes(attributes)
+		.container
+			.text-center
+				h1 Отлично!<br> Ваш планер собран
+			+e.btn-wrap
+				+e.btn.btn-mint(href="#") Перейти к оформлению заказа
+				+e.btn.btn-blue(href="#") Собрать еще один планер
+				
+	// end sBeforeOrder

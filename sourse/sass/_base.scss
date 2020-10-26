@@ -117,6 +117,9 @@ body {
 .fw-500 {
 	font-weight: 500;
 }
+.fw-600 {
+	font-weight: 600;
+}
 
 .fw-900 {
 	font-weight: 900;
@@ -440,4 +443,50 @@ iframe {
 	color: $primary;
 	border: 1px solid #fff;
 	background-color: #ffffff;
+}
+
+.btn-mint{
+	color: #fff;
+	background-color: #3FA5AA;
+	// border-radius: 10px;
+	&:hover{
+		background: #3C9B9F;
+	}
+}
+
+.btn-blue{
+	background: rgba(15, 139, 145, 0.07);
+	border: 1px solid rgba(15, 139, 145, 0.5);
+	color: #3FA5AA;
+}
+
+.mb-5{margin-bottom: calc(#{rem(5)} / 2);}
+.mb-10{margin-bottom: calc(#{rem(10)} / 2);}
+.mb-15{margin-bottom: calc(#{rem(15)} / 2);}
+.mb-20{margin-bottom: calc(#{rem(20)} / 2);}
+.mb-25{margin-bottom: calc(#{rem(25)} / 2);}
+.mb-30{margin-bottom: calc(#{rem(30)} / 2);}
+.mb-35{margin-bottom: calc(#{rem(35)} / 2);}
+.mb-40{margin-bottom: calc(#{rem(40)} / 2);}
+.mb-45{margin-bottom: calc(#{rem(45)} / 2);}
+.mb-50{margin-bottom: calc(#{rem(50)} / 3);}
+.mb-55{margin-bottom: calc(#{rem(55)} / 2);}
+.mb-60{margin-bottom: calc(#{rem(60)} / 2);}
+.mb-65{margin-bottom: calc(#{rem(65)} / 2);}
+.mb-70{margin-bottom: calc(#{rem(70)} / 2);}
+@include media-breakpoint-up(md) {
+	.mb-5{margin-bottom: rem(5);}
+	.mb-10{margin-bottom: rem(10);}
+	.mb-15{margin-bottom: rem(15);}
+	.mb-20{margin-bottom: rem(20);}
+	.mb-25{margin-bottom: rem(25);}
+	.mb-30{margin-bottom: rem(30);}
+	.mb-35{margin-bottom: rem(35);}
+	.mb-40{margin-bottom: rem(40);}
+	.mb-45{margin-bottom: rem(45);}
+	.mb-50{margin-bottom: rem(50);}
+	.mb-55{margin-bottom: rem(55);}
+	.mb-60{margin-bottom: rem(60);}
+	.mb-65{margin-bottom: rem(65);}
+	.mb-70{margin-bottom: rem(70);}
 }

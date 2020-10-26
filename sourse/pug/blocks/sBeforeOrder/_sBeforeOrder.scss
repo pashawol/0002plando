@@ -1,0 +1,46 @@
+	// start .sBeforeOrder
+.sBeforeOrder {
+		
+	@include media-breakpoint-up(md){
+		--sPT: #{rem(189)};
+		--sPB: #{rem(206)};
+	}
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(179)};
+		--sPB: #{rem(200)};
+	}
+	--sPT: #{rem(37)};
+	--sPB: #{rem(50)};
+
+	h1{
+		@include media-breakpoint-up(sm){
+			margin-bottom: rem(36);
+		}
+		margin-bottom: rem(30);
+		font-weight: bold;
+		line-height: (64 / 64);
+		color: #3FA5AA;
+	}
+	&__btn-wrap{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-outline;
+		width: rem(291);
+		margin-bottom: 10px;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sBeforeOrder

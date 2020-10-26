@@ -25,3 +25,15 @@ mixin sSteps(data)
 				+item('3', 'Обложка "Light blue"')
 				+item('3', 'Обложка "Light blue"')
 	// end sSteps
+
+
+mixin sSteps-03(data)
+	// start sSteps
+	+b.SECTION.sSteps--03.section#sSteps&attributes(attributes)
+		.container
+			+b.step-item--03
+				+e.img-wrap--03
+					+pic(`product-1.png`,'',0)
+				+e.btn.btn-mint(href="#") Выбрать
+			h4 Детали обложки
+			p Обложка из плотного пластика, которая не рвется и не пачкается, пружинный переплет.

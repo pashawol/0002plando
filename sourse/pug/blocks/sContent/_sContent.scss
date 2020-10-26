@@ -1,7 +1,80 @@
-
 	// start .sContent
-	.sContent {
-		 
+.sContent {
+
+
+	h2,
+	h4{
+		font-weight: 600;
+	}
+	&__contacts-item{
+		display: flex;
+		align-items: center;
+	}
+
+	&__title{
+		font-weight: 300;
+		font-size: 18px;
+		line-height: (29 / 18);
+		opacity: 0.8;
+	}
+
+	ul{
+		list-style-type: none;
+		margin-bottom: 82px;
+	}
+	
+	li{
+		display: flex;
+		align-items: center;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: (29 / 18);
+		// opacity: 0.8;
+		.sContent__text{
+			margin-left: 7px;
+			font-size: 20px;
+			line-height: (23 / 20);
+		}
+		.mail-color{
+			color: #3FA5AA;
+		}
+	}
+
+	// &__icon-wrap {
+	// 	margin-right: rem(8);
+	// 	width: rem(18);
+	// 	text-align: center;
+	// }
+
+	.horizontalList{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		li{
+			position: relative;
+			padding-left: 13px;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				background-color: #3FA5AA;
+				border-radius: 50%;
+				left: 0;
+				top: 10px;
+			}
+		}
+	}
+
+	p{
+		font-weight: 300;
+		font-size: 18px;
+		line-height: (29 / 18);
+		opacity: 0.8;
+		max-width: 1070px;
+		// margin-bottom: 50px;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

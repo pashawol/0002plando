@@ -132,6 +132,15 @@
 				margin-top: rem(20);
 		}
 
+		&--03{
+			@include media-breakpoint-up(md){
+				--sPT: #{rem(68)};
+				--sPB: #{rem(59)};
+			}
+			--sPT: #{rem(26)};
+			--sPB: #{rem(24)};
+		}
+
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}
