@@ -18,12 +18,11 @@ block pagecontent
 	//- +headerBlock03()
 	+sContent
 		h2.mb-30 Наши контакты:
-		ul
+		ul.verticalList
 			li
 				img(src="img/svg/paw.svg" alt="")
 				+e.title Телефон: 
-				//- +e.text + 375 29 333 33 33
-				+e.text(href="tel:+375293333333") + 375 29 333 33 33
+				+e.text.tel-color(href="tel:+375293333333") + 375 29 333 33 33
 			li
 				+e.icon-wrap: img(src="img/svg/paw.svg" alt="")
 				+e.title E-mail: 
@@ -35,10 +34,10 @@ block pagecontent
 
 		h2.mb-40 Оплата и&nbsp;доставка, допустим
 		h4 Пункт 1
-		p.mb-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar turpis mi ac id aliquam. Non nec arcu pellentesque eleifend egestas turpis fames. Amet velit, volutpat fermentum nibh auctor nec. Egestas mi nullam sed ridiculus leo risus. Et maecenas suscipit dolor tempus diam orci at.
+		p.mb-45 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar turpis mi ac id aliquam. Non nec arcu pellentesque eleifend egestas turpis fames. Amet velit, volutpat fermentum nibh auctor nec. Egestas mi nullam sed ridiculus leo risus. Et maecenas suscipit dolor tempus diam orci at.
 
 		h4 Пункт 2
-		p.mb-50 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar turpis mi ac id aliquam. Non nec arcu pellentesque eleifend egestas turpis fames. Amet velit, volutpat fermentum nibh auctor nec. Egestas mi nullam sed ridiculus leo risus. Et maecenas suscipit dolor tempus diam orci at.
+		p.mb-45 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar turpis mi ac id aliquam. Non nec arcu pellentesque eleifend egestas turpis fames. Amet velit, volutpat fermentum nibh auctor nec. Egestas mi nullam sed ridiculus leo risus. Et maecenas suscipit dolor tempus diam orci at.
 
 		h4 Горизонтальный список:
 		UL.horizontalList
@@ -47,7 +46,7 @@ block pagecontent
 			li Третий элемент списка
 			li Четвертый элемент списка
 		
-		h2 Еще большой заголовок
+		h2.mb-25 Еще большой заголовок
 		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar turpis mi ac id aliquam. Non nec arcu pellentesque eleifend egestas turpis fames. Amet velit, volutpat fermentum nibh auctor nec. Egestas mi nullam sed ridiculus leo risus. Et maecenas suscipit dolor tempus diam orci at.
 		//- br
 		p Purus rutrum ultricies blandit blandit parturient donec magna. Tincidunt diam quam tortor, volutpat amet convallis risus. Ridiculus nulla in purus mauris sit sit elementum interdum. 
