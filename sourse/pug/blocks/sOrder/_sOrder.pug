@@ -1,0 +1,80 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Оформление заказа
+				
+			+form-wrap
+				+e.group
+					+e.group-text Введите адрес своей электронной почты. На&nbsp;этот адрес будут отправляться уведомления о&nbsp;статусе заказа.
+					+input('Ваш E-mail','email')
+					+in-c()
+						+e.SPAN.text.samll Я даю согласие на #[a(href="#") обработку персональных данных  ]
+				+e.group
+					+e.group-title Доставка
+					+e.group-text Введите адрес доставки и&nbsp;телефон. Все поля обязательны для заполнения.
+					.row
+						.col-lg-6
+							+input('Имя','text','Имя')(class="is-invalid")
+								.invalid-feedback Это обязательное поле
+						.col-lg-6
+							+input('Фамилия','text','Фамилия')
+						.col-lg-6
+							+input('Отчество','text','Отчество')
+						.col-lg-6
+							+input('Телефон','tel','Телефон')
+						.col-lg-12
+							+input('Беларусь','select','Страна')
+						.col-lg-6
+							+input('Город','text','Город')
+						.col-lg-6
+							+input('Почтовый индекс','text','Почтовый индекс')
+						.col-lg-12
+							+input('Адрес','text','Адрес') 
+				+e.group
+					+e.group-title Способ доставки
+					+e.group-text Для Вашего региона доступны следующие способы доставки:
+					+in-c('radio')
+						span.row
+							.col
+								+e.title.d-block Россия, Беларусь, Украина
+								.small.fw-300 От 17-24 рабочих дней
+							span.col-auto.h6 1 000 ₽ 
+					
+					+in-c('radio')
+						span.row
+							.col
+								+e.title.d-block Другие страны
+								.small.fw-300 От 17-24 рабочих дней
+							span.col-auto.h6 1 085 ₽ 
+					+in-c('radio')
+						span.row
+							.col
+								+e.title.d-block СДЭК курьером до двери
+								.small.fw-300 До 5-7 рабочих дней
+							span.col-auto.h6 1 000 ₽ 
+					+in-c('radio')
+						span.row
+							.col
+								+e.title.d-block СДЭК до склада
+								.small.fw-300 до&nbsp;4-6 рабочих дней. Выберем ближайший к&nbsp;вам пункт выдачи. В&nbsp;комментариях далее можете указать другой.
+							span.col-auto.h6 800 ₽ 
+
+				+e.group
+					+e.group-title Способ оплаты
+					+e.group-text Доступна онлайн-оплата картой любого банка с&nbsp;платежной системой Visa, Master Card и&nbsp;Белкарт:
+					.row.row--sm.pb-3
+						.col-auto.pb-3
+							img(src="img/svg/pay-1.svg" loading="lazy", alt="")
+						.col-auto.pb-3
+							img(src="img/svg/pay-2.svg" loading="lazy", alt="")
+						.col-auto.pb-3
+							img(src="img/svg/pay-3.svg" loading="lazy", alt="")
+					+e.alert
+						+icon("lock")
+						p После нажатия кнопки Перейти к&nbsp;оплате вы&nbsp;будете перенаправлены на&nbsp;сайт платежной системы Webpay, надежного оператора, осуществляющего тысячи платежных операций ежедневно.
+						p Сохранность Ваших платежных данных гарантируется международным стандартом безопасности при работе с&nbsp;платежными карточками PCI&nbsp;DSS.
+				+input('Ваш комментарий ... ','textarea','Комментарий к заказу') 
+				button.btn.btn-primary.px-5(type='submit') Перейти к оплате
+	// end sOrder

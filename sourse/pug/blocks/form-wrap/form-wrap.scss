@@ -1,37 +1,100 @@
 .form-wrap{
  	&__input-wrap{
 			// @extend .form-group;
+			margin-bottom: rem(20);
 			
 		}
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
- 	}
+	 }
+	 &__title{
+		 margin-bottom: rem(5);
+		 font-weight: 300;
+		 color: #202424;
+		 opacity: 0.85;
+		 display: inline-block;
+
+	 }
  	&__btn{
  		cursor: pointer;
  	}
  	label{
  		width: 100%;
  		display: block;
- 	}
+	 }
+	 &__group{
+		 	 @include media-breakpoint-up(sm) {
+				--spb: #{rem(40)};
+			}
+			--spb: #{rem(25)};
+			padding-bottom:calc( var(--spb) + 5px);
+			margin-bottom: var(--spb);
+		 border-bottom: 1px solid rgba($color: #202424, $alpha: .07);
+	 }
+	 &__group-title{
+		 font-weight: 600;
+		 @include rfs(24px);
+		 margin-bottom: rem(12);
+	 }
+	 &__group-text{
+		 color: #202424;
+		 opacity: 0.8;
+		 font-size: rem(18);
+		 margin-bottom: 1rem;
+	 }
+
+	 &__alert{
+		 border: 1px solid rgba($color: #3FA5AA, $alpha: .35);
+		 box-sizing: border-box;
+		 
+			 @include media-breakpoint-up(sm) {
+				border-radius: 10px;
+
+				 --spacing : #{rem(32)};
+				 margin-left: 0;
+				 margin-right: 0;
+				}
+				margin-left: -15px;
+				margin-right: -15px;
+				--spacing : #{rem(20)};
+			padding: var(--spacing);
+			position: relative;
+				@include media-breakpoint-up(sm) {
+
+					padding-left: calc(#{rem(34)} + var(--spacing));
+				}
+			p{
+				color: #202424;
+				opacity: 0.8;
+				font-weight: 30;
+				font-size: rem(13);
+			}
+			.icon{
+				top: var(--spacing);
+				left: var(--spacing);
+				color: $primary;
+				font-size: rem(25);
+				margin-bottom: 1rem;
+				@include media-breakpoint-up(sm) {
+					margin-left: 0;
+					margin-right: 0;
+					position: absolute;
+					margin-top: rem(5);
+				}
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+
+			}
+	 }
 }
 
-
-.parsley-error{
-	border-image: none;
-	border: 2px solid  red !important;
-	color: red;
-	outline: 0 !important;
-	 
+textarea{
+	height: rem(170);
 }
-.parsley-success{
-	border: 2px solid  #00d600 !important;
-
-}
-.parsley-errors-list{
-	color: red;
-}
+ 
 
 // 
 @include media-breakpoint-up(xl) {}
@@ -75,12 +138,28 @@
 .custom-input{
 	display: block;
 	margin: auto;
+	a{
+		display: inline-block;
+	}
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 13px;
+	&__title{
+		}
+
+	}
 	 
 	margin-bottom: rem(20);
 	cursor: pointer;
 	position: relative;
 	padding-left: rem(35px);
-	display: inline-block;
+	// display: inline-block;
+ 
+	display: block;
+	padding-top: rem(2);
+	// height: rem(18);
+	// display: flex;
+	// align-items: center;
 	&__input{
 		position: absolute;
 		// opacity: 0;
@@ -100,6 +179,8 @@
 		height: rem(20px);
 		background-color: $primary;
 		@include mt;
+		box-shadow: 0px 5px 10px rgba(63, 165, 170, 0.04);
+		border-radius: 5px;
 		position: absolute; 
 		margin-right: 10px;
 		&::after{  
@@ -111,12 +192,14 @@
 
 	}
  
-	&__input[type="checkbox"] + &__lab{
+	&__input  + &__lab{
 		&::after{ 
-			content:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 448 512'%3E%3Cpath fill='%23fff' d='M413.505 91.951L133.49 371.966l-98.995-98.995c-4.686-4.686-12.284-4.686-16.971 0L6.211 284.284c-4.686 4.686-4.686 12.284 0 16.971l118.794 118.794c4.686 4.686 12.284 4.686 16.971 0l299.813-299.813c4.686-4.686 4.686-12.284 0-16.971l-11.314-11.314c-4.686-4.686-12.284-4.686-16.97 0z' class='st0'/%3E%3C/svg%3E");
+			content: url(../img/svg/checkmark.svg);
 			position: absolute;
 			@include a-cent; 
 			opacity: 0;
+			width: 1rem;
+			height: 1rem;
 		}
 	}
 
@@ -127,9 +210,10 @@
 		}
 	}
 
-	&__input:checked + &__lab{
-		background-color: $success;
-		 
+	&__input:checked ~ .row{
+		color: $primary;
+	}
+	&__input:checked + &__lab{ 
 		&::after{
 	
 			opacity: 1;
@@ -140,21 +224,21 @@
 
 
 
-// select.form-control {
-// 	background-image: url(../img/svg/chevron-up.svg);
-// 	background-repeat: no-repeat;
-// 	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
-// 	padding-right: rem(43px);
-// 	appearance: none !important;
+select.form-control {
+	background-image: url(../img/svg/chevron-down.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100%  - 20px) 50%; // background-size: rem(18) ;
+	padding-right: rem(43px);
+	appearance: none !important;
 
-// 	&:not([size]):not([multiple]) {
-// 		height: $input-height;
-// 	}
+	&:not([size]):not([multiple]) {
+		height: $input-height;
+	}
 
-// 	&:focus::-ms-value {
+	&:focus::-ms-value {
 
-// 	}
-// }
+	}
+}
 
 
 input[type='number'] {

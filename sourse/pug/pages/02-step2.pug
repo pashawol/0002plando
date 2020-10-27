@@ -9,16 +9,15 @@ include ../blocks/sSteps/_sSteps.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Страница товара1 '
+	- let  title= 'Шаг 2: Выбери интерактивный блок'
 	title= title
 block pagecontent
 
 	//- +mob-mnu()
 	+top-nav()
-	+headerBlock03()
-	+sSteps-03()
-	//- +sStepNav
-	//- +sSteps
+	//- +headerBlock()
+	+sStepNav
+	+sSteps2
 	+footer()
 
 

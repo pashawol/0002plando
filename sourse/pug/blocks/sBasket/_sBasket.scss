@@ -1,0 +1,143 @@
+
+	// start .sBasket
+	.sBasket {
+
+		&__item{
+			display: flex;
+			position: relative;
+			&:first-child{
+
+				border-top: 1px solid rgba($color: #202424, $alpha: .07);
+			}
+			border-bottom: 1px solid rgba($color: #202424, $alpha: .07);
+			padding-top: rem(38);
+			padding-bottom: rem(38);
+			align-items: center;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(630);
+			padding-right: rem(44);
+			.row{
+				align-items: center;
+				flex-grow: 1;
+				> * {
+					margin-bottom: 1rem;
+				}
+			}
+		}
+		&__img-wrap{
+			@include media-breakpoint-up(sm) {
+				--size: #{rem(140)};
+			}
+			--size:90px;
+			flex: 0 0 var(--size);
+			max-width: var(--size);
+			text-align: center;
+			display: block;
+			margin-right: rem(24);
+		}
+
+		&__price{
+			width: 116px;
+			font-weight: 600;
+			font-size: rem(18);
+			text-align: center;
+		}
+
+		&__total{
+				border: 1px solid rgba($color: #202424, $alpha: .07);
+				border-radius: 10px;
+				padding: rem(29) rem(36);
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(410);
+				margin-top: rem(35);
+				margin-bottom: rem(50);
+				span{
+					font-weight: 300;
+					color: #202424;
+					opacity: 0.8;
+				}
+		}
+
+		&__btn{
+			margin-left: auto;
+			margin-right: auto;
+			width: rem(190);
+			@extend .btn;
+			@extend .btn-block;
+			@extend .btn-primary;
+		}
+
+		&__close{
+			cursor: pointer;
+			opacity: 0.25;
+			@include mt;
+			@include a-cent(y);
+			right: 0;
+			width: 1rem;
+			height: 1rem;
+			// margin-bottom: 0;
+			&:hover{
+				opacity: 1;
+			}
+			.icon{
+				font-size: 1rem;
+				color: #202424;
+			}
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sBasket
+
+.add-block{
+	position: relative;
+	padding-right: rem(27);
+	width: rem(38 + 27);
+	input{
+		width: rem(35);
+		text-align: center;
+		font-weight: 300;
+		background-color: #ffffff; 
+
+		border: 1px solid #fff;
+		box-shadow: 0px 10px 30px rgba(73, 48, 31, 0.04);
+		border-radius: 5px;
+
+	}
+	&__btn{
+		position: absolute;
+		right: 0;
+		height: rem(12);
+		width: rem(27);
+		 
+		cursor: pointer;
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			width: 12px;
+			height: 1px;
+			background: #3FA5AA;
+			@include a-cent;
+		}
+		&--plus{
+			top: 0;
+			&::after{
+				transform: rotate(90deg);
+			}
+		}
+		&--minus{
+			bottom: 0;
+		}
+	}
+}

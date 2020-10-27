@@ -5,23 +5,22 @@
 
 		--sPT: #{rem(64)};
 		--sPB: #{rem(64)};
-		--sTPB: #{rem(80)};
+		--sTPB: #{rem(40)};
 	}
 
 	--sPT: #{rem(64 / 2)};
 	--sPB: #{rem(70 / 2)};
-	--sTPB: #{rem(60 / 2)};
+	--sTPB: #{rem(40 / 2)};
 
 
-		--swiperArrowSize: #{rem(68)};
-		--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-		--swiperBorderColorDef: var(--bs-primary);
-		--swiperColorDef: var(--bs-primary);
-		--swiperBgDef: #ffffff;
+		--swiperArrowSize: #{rem(26)};
+		--swiperArrowPosition: 0;
+ 
+		--swiperColorDef: #3FA5AA; 
 	
 		--swiperBorderColorDefHover: var(--bs-primary);
-		--swiperColorDefHover: var(--bs-primary);
-		--swiperBgDefHover: #ffffff;
+		--swiperColorDefHover: #3FA5AA;
+		// --swiperBgDefHover: #ffffff;
 	
 }
 

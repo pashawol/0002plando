@@ -277,29 +277,27 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
+		
+	}
+	
+	const swiper4 = new Swiper('.step-item__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		spaceBetween: 20,
+		slidesPerView: 1,  
+
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.step-item .swiper-button-next',
+			prevEl: '.step-item .swiper-button-prev',
 		},
 		pagination: {
-			el: ' .swiper-pagination',
+			el: '.step-item  .swiper-pagination',
 			type: 'bullets',
 			clickable: true,
 			// renderBullet: function (index, className) {
 			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
 			// }
 		},
-	}
-
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
 
 	});
 	// modal window
