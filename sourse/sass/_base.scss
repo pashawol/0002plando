@@ -315,10 +315,12 @@ ul {
 		/* Акцент мятный */
 
 		border: 1px solid #3FA5AA;
-		&-active,
+		&-active{
+		opacity: 1;
+		background-color: $primary;
+	}
 		&:hover {
-			opacity: 1;
-			background-color: $primary;
+			background-color: #3FA5AA;
 		}
 	}
 }

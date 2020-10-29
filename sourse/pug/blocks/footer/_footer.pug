@@ -9,13 +9,13 @@ mixin footer()
 					+mnu()
 
 					+e.copy.d-none.d-md-block (c) PlanDo 2020-2021 
-				.col-auto.text-right.order-md-0.order-last
-					a.btn.btn-outline-l.mb-3(href="#") Далее
-						+icon('arrow-r')
-					br
-					a.btn.btn-white(href="#") Назад
 				.col-auto
 					+soc()
 				.w-100.d-md-none
 				.col.d-md-none.align-self-center
 					+e.copy (c) PlanDo 2020-2021 
+		+b.fixed-btn
+			+e.btn.btn-outline-l(href="#") Далее
+				+icon('arrow-r')
+			br
+			+e.btn.btn-outline.mt-3(href="#") Назад

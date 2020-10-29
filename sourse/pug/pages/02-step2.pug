@@ -16,7 +16,17 @@ block pagecontent
 	//- +mob-mnu()
 	+top-nav()
 	//- +headerBlock()
-	+sStepNav
+	+sStepNavBody()
+		.d-none.d-md-block
+			.row
+				+navItem(`1`,`Выбери <br> обложку планера`)
+				+navItem(`2`,`Выбери  <br> главный блок`).active
+				+navItem(`3`,`Выбери блок планирования`)
+				+navItem(`4`,`Выбери дополнительный блок`)
+		.d-md-none
+			+b.step-nav-item(href="#").active
+				+e.step шаг 2 из 4
+				+e.title Выбери  главный блок
 	+sSteps2
 	+footer()
 

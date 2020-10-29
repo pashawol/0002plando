@@ -9,7 +9,7 @@ mixin sSteps(data)
 				mixin item(i,t)
 					.col-lg-4.col-sm-6
 						+b.step-item
-							+e.img-wrap
+							+e.img-wrap(href="#")
 								+pic(`step-1-${i}.png`,'',0)
 							+e.title= t
 							+e.btn(href="#") Выбрать
@@ -70,7 +70,7 @@ mixin sSteps-03-2(data)
 						.swiper-wrapper
 							- for (var x = 0; x < 3; x++)
 								+e.slide.swiper-slide
-									a(href="img/@2x/product-2.png" data-fancybox="gal")
+									a(href="img/@2x/product-2.png" data-fancybox="gal").d-block
 										img.res-i.swiper-lazy(src="#" data-src="img/@2x/product-2.png", alt="")
 				.swiper-pagination
 				+e.btn.btn-mint(href="#") Выбрать

@@ -1,20 +1,24 @@
-mixin sStepNav(data)
+mixin navItem(i, t)
+	+e.col.col-md-3.col-sm-6
+		+b.step-nav-item(href="#")&attributes(attributes)
+			+e.step= `шаг ${i}`
+			+e.title!= t 
+mixin sStepNavBody()
 	// start sStepNav
 	+b.sStepNav.section#sStepNav&attributes(attributes)
 		.container
-			.d-none.d-md-block
-				.row
-					mixin item(i, t)
-						+e.col.col-md-3.col-sm-6
-							+b.step-nav-item(href="#")&attributes(attributes)
-								+e.step= `шаг ${i}`
-								+e.title!= t 
-					+item(`1`,`Выбери <br> обложку планера`,``).active
-					+item(`2`,`Выбери  <br> главный блок`,``)
-					+item(`3`,`Выбери блок планирования`,``)
-					+item(`4`,`Выбери дополнительный блок`,``)
-			.d-md-none
-				+b.step-nav-item(href="#").active
-					+e.step шаг 1 из 4
-					+e.title Выбери обложку планера
+			
+			block
 	// end sStepNav
+mixin sStepNav(data)
+	+sStepNavBody()
+		.d-none.d-md-block
+			.row
+				+navItem(`1`,`Выбери <br> обложку планера`).active
+				+navItem(`2`,`Выбери  <br> главный блок`)
+				+navItem(`3`,`Выбери блок планирования`)
+				+navItem(`4`,`Выбери дополнительный блок`)
+		.d-md-none
+			+b.step-nav-item(href="#").active
+				+e.step шаг 1 из 4
+				+e.title Выбери обложку планера

@@ -177,7 +177,9 @@ textarea{
 		top: rem(3); 
 		width: rem(20px);
 		height: rem(20px);
-		background-color: $primary;
+		background-color: #ffffff;
+		border: 1px solid rgba(32, 36, 36, 0.3);
+		
 		@include mt;
 		box-shadow: 0px 5px 10px rgba(63, 165, 170, 0.04);
 		border-radius: 5px;
@@ -193,6 +195,7 @@ textarea{
 	}
  
 	&__input  + &__lab{
+		
 		&::after{ 
 			content: url(../img/svg/checkmark.svg);
 			position: absolute;
@@ -203,17 +206,32 @@ textarea{
 		}
 	}
 
+	&__input[type="checkbox"] + &__lab{
+		border: 1px solid rgba(63, 165, 170, 0.7);
+	}
+	
 	&__input[type="radio"] + &__lab{ 
 		border-radius: 50%;
+		background-color: #ffffff;
+		border: 1px solid rgba(32, 36, 36, 0.3);
 		&::after{ 
 			border-radius: 50%;
 		}
 	}
-
+&__input:hover+&__lab {
+	border: 1px solid #3FA5AA;
+}
+&__title{
+	@include mt;
+}
+&:hover &__title {
+	color: #3FA5AA;
+}
 	&__input:checked ~ .row{
 		color: $primary;
 	}
 	&__input:checked + &__lab{ 
+		background-color: $primary;border-color: $primary;
 		&::after{
 	
 			opacity: 1;

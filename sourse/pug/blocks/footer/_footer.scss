@@ -2,7 +2,7 @@
 		
 	margin-top: auto;
 	background: #3FA5AA;
-	padding: rem(30) 0;
+	padding: rem(30) 0 rem(60);
 	.navMenu__link{
 		color: #ffffff !important;
 		padding-left: 0;
@@ -35,7 +35,11 @@
 		padding-top: rem(10);
 	}
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+	.container{
+
+	}
+}
 
 @include media-breakpoint-up(lg) {}
 
@@ -76,4 +80,32 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+}
+
+
+.fixed-btn{
+	position: fixed;
+	bottom: rem(37);
+	@include media-breakpoint-up(sm) {
+
+		right: rem(80);
+	}
+	right: 15px;
+	z-index: 200;
+	&__btn{
+		@extend .btn;
+		width: rem(139);
+		&.btn-outline{
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			&:not(:hover) {
+				background-color: #ffffff;
+			}
+		}
+		&.btn-outline-l{
+			background: #3FA5AA;
+			
+		}
+	}
 }

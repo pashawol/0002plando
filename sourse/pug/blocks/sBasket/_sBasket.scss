@@ -78,12 +78,18 @@
 			width: 1rem;
 			height: 1rem;
 			// margin-bottom: 0;
+			color: #202424;
 			&:hover{
-				opacity: 1;
+				opacity: .55;
+				color: #3FA5AA;
+			}
+			&:active{
+				color: #3FA5AA;
+				opacity:1;
+
 			}
 			.icon{
 				font-size: 1rem;
-				color: #202424;
 			}
 		}
 		 
@@ -112,7 +118,12 @@
 		border: 1px solid #fff;
 		box-shadow: 0px 10px 30px rgba(73, 48, 31, 0.04);
 		border-radius: 5px;
-
+		&:hover{
+			box-shadow: 0px 10px 30px rgba(73, 48, 31, 0.07);
+		}
+		&:focus{
+			box-shadow: 0px 10px 30px rgba(73, 48, 31, 0.07);
+		}
 	}
 	&__btn{
 		position: absolute;
@@ -121,6 +132,7 @@
 		width: rem(27);
 		 
 		cursor: pointer;
+		@include mt;
 		&::before,
 		&::after{
 			content: '';
@@ -138,6 +150,9 @@
 		}
 		&--minus{
 			bottom: 0;
+		}
+		&--plus:hover~&--minus{
+			opacity: 0.5;
 		}
 	}
 }

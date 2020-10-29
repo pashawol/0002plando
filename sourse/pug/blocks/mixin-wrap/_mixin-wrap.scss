@@ -16,14 +16,8 @@
 		width: rem(47);
 		display: flex;
 		justify-content: center;
-		align-items: center;
-
-		color: #ffffff;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
-		}
-		
+		align-items: center; 
+		color: #ffffff; 
 	}
 	.icon{
 	font-size: rem(22);
@@ -44,3 +38,6 @@
 	}
 }
 
+.form-control{
+	box-shadow: none !important;
+}
