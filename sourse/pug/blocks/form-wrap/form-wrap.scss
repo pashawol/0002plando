@@ -32,6 +32,9 @@
 			padding-bottom:calc( var(--spb) + 5px);
 			margin-bottom: var(--spb);
 		 border-bottom: 1px solid rgba($color: #202424, $alpha: .07);
+		 &--head{
+			 
+		 }
 	 }
 	 &__group-title{
 		 font-weight: 600;
@@ -42,7 +45,7 @@
 		 color: #202424;
 		 opacity: 0.8;
 		 font-size: rem(18);
-		 margin-bottom: 1rem;
+		 margin-bottom: rem(18);
 	 }
 
 	 &__alert{

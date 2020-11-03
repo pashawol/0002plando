@@ -1,7 +1,7 @@
 
 	// start .sBasket
 	.sBasket {
-
+		
 		&__item{
 			display: flex;
 			position: relative;
@@ -10,18 +10,21 @@
 				border-top: 1px solid rgba($color: #202424, $alpha: .07);
 			}
 			border-bottom: 1px solid rgba($color: #202424, $alpha: .07);
-			padding-top: rem(38);
-			padding-bottom: rem(38);
+			padding-top: rem(15);
+			padding-bottom: rem(15);
 			align-items: center;
 			margin-left: auto;
 			margin-right: auto;
-			max-width: rem(630);
+			max-width: rem(631);
 			padding-right: rem(44);
 			.row{
 				align-items: center;
 				flex-grow: 1;
+				min-height: rem(140);
 				> * {
+					@include media-breakpoint-down(md) {
 					margin-bottom: 1rem;
+					}
 				}
 			}
 		}
@@ -30,6 +33,17 @@
 				--size: #{rem(140)};
 			}
 			--size:90px;
+			picture{
+				display: block;
+				
+			}
+			img{
+				max-height: 100%;
+				max-height: rem(140);
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
 			flex: 0 0 var(--size);
 			max-width: var(--size);
 			text-align: center;
@@ -92,9 +106,14 @@
 				font-size: 1rem;
 			}
 		}
-		 
+		 &__title{
+			 font-size: rem(18);
+		 }
 	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(106)};
+		--sPB: #{rem(116)};
+	}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
 	//
@@ -138,7 +157,7 @@
 			content: '';
 			position: absolute;
 			width: 12px;
-			height: 1px;
+			height: 2px;
 			background: #3FA5AA;
 			@include a-cent;
 		}

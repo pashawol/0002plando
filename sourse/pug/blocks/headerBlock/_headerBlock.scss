@@ -23,6 +23,7 @@
 		font-weight: 300;
 	}
 	&__title{
+		margin-bottom: 0.5rem;
 		@include media-breakpoint-up(xl) {
 			@include rfs(20px);
 		}
@@ -36,32 +37,51 @@
 
 			@include tear(rem(360));
 		}
-		@include tear(rem(260));
+			@include media-breakpoint-up(md) {
+				@include tear(rem(190));
+				// margin-left: rem(-20);
+			}
 		margin-top: rem(-10);
 		z-index: -1;
 	}
 	&__col:nth-child(1) &__img-wrap{
 		@include media-breakpoint-up(xxl){
 
-			@include tear(rem(720));
-			margin-top: rem(-140);
+			// @include tear(rem(720));
+			margin-top: rem(-10);
 			text-align: left;
-			margin-left: rem(-80);
+			width: rem(385);
+			margin-left: rem(-100);
 		}
-		margin-top: rem(-100);
-		@include tear(rem(520));
+			@include media-breakpoint-up(xl) {
+				margin-left: rem(-50);
+				width: rem(305);
+				margin-top: 0;
+			}
+			@include media-breakpoint-up(md) {
+
+				margin-top:1rem;
+				margin-left: rem(-20); 
+			}
+		// margin-top: rem(-100);
+		// @include tear(rem(520));
 		
 	}
 	&__col:nth-child(2) &__img-wrap{
 			@include media-breakpoint-up(xxl){
 				@include tear(rem(440)); 
 
-				margin-left: rem(-40);
+				margin-left: rem(-70);
 			}
 			@include media-breakpoint-up(xl){
 				@include tear(rem(300)); 
 				margin-left: rem(-20);
 			}
+			@include media-breakpoint-up(md){
+				@include tear(rem(200)); 
+				margin-left: rem(-20);
+
+				}
 			// @include tear(rem(300)); 
 		
 	}
@@ -69,14 +89,15 @@
 	&__col:nth-child(3) &__img-wrap{
 			@include media-breakpoint-up(xxl){
 				// @include tear(rem(440)); 
-				margin-left: rem(-20);
-				max-width: none;
+				margin-left: rem(-30);
+				@include tear(rem(385)); 
+				// max-width: none;
 			}
 			@include media-breakpoint-up(xl){
-				// @include tear(rem(440)); 
-				max-width: rem(300);
+				@include tear(rem(300)); 
 				// margin-left: rem(-20);
-			}
+			} 
+		
 			// @include tear(rem(300)); 
 		
 	}
@@ -85,12 +106,13 @@
 	&__col:nth-child(4) &__img-wrap{
 			@include media-breakpoint-up(xxl){
 				// @include tear(rem(440)); 
-				// margin-left: rem(-20);
+				margin-left: rem(20);
 				max-width: none;
+				@include tear(rem(440)); 
 			}
 			@include media-breakpoint-up(xl){
-				// @include tear(rem(440)); 
-				max-width: rem(300);
+				@include tear(rem(300)); 
+				// max-width: rem(300);
 				// margin-left: rem(-20);
 			}
 			// @include tear(rem(300)); 
@@ -98,14 +120,15 @@
 	}
 	
 	&__col{
+		margin-bottom: rem(50);
 		@include media-breakpoint-up(xxl){
-			margin-bottom: rem(-100);
+			// margin-bottom: rem(-100);
 		}
 		@include media-breakpoint-up(xl){
-			margin-bottom: rem(-40);
+			// margin-bottom: rem(-40);
 		}
 				@include media-breakpoint-up(sm){
-		margin-bottom: rem(-50);
+		// margin-bottom: rem(-50);
 				}
 		z-index: 2;
 		position: relative;
@@ -115,20 +138,20 @@
 		}
 		&:nth-child(1){
 			@include media-breakpoint-down(sm) {
-				margin-bottom: -100px;
+				// margin-bottom: -100px;
 			}
 			&::before {
 				@include media-breakpoint-up(md) {
 				content: url(../img/svg/arrow-1.svg);
 				}
 				@include media-breakpoint-up(xxl){ 
-					bottom: rem(100);
+					bottom: rem(-30);
 				}
 				@include media-breakpoint-up(xl){ 
-					bottom: rem(50);
+					bottom: rem(-40);
 				}
-				bottom: rem(30);
-				right: rem(-50);
+				bottom: rem(-70);
+				right: rem(-20);
 			}
 		}
 		&:nth-child(2){
@@ -137,13 +160,13 @@
 				content: url(../img/svg/arrow-2.svg);
 				}
 					@include media-breakpoint-up(xxl){
-						bottom: rem(120);
+						bottom: rem(-20);
 					}
 					@include media-breakpoint-up(xl){
-						bottom: rem(120);
+						bottom: rem(-30);
 					}
-					bottom: rem(60);
-				right: rem(-90);
+					bottom: rem(-50);
+				right: rem(-30);
 			}
 		}
 		&:nth-child(3){
@@ -151,11 +174,12 @@
 				@include media-breakpoint-up(md) {
 
 					content: url(../img/svg/arrow-3.svg);
+					bottom: rem(-25);
 				}
-					@include media-breakpoint-up(xl){
-						bottom: rem(150);
+				@include media-breakpoint-up(xl){
+					bottom: rem(-35);
 					}
-					bottom: rem(50);
+					// bottom: rem(-60);
 				right: rem(-50);
 			}
 		}
@@ -220,6 +244,7 @@
 	@include media-breakpoint-down(md) {}
 
 	@include media-breakpoint-down(sm) {
+		&__item,
 		&__col{
 			margin-left: auto;
 			margin-right: auto;
@@ -228,7 +253,16 @@
 	}
 
 	@include media-breakpoint-down(xs) {}
-
+	.swiper-button-hand{
+		width: rem(28);
+		height: rem(28);
+		border-radius: 50%;
+		background-color: #ffffff;
+		.icon{
+			font-size: rem(14);
+		}
+		--swiperArrowSize: #{rem(26)};
+	}
 }
 
 // end.headerBlock

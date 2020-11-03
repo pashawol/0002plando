@@ -1,19 +1,20 @@
-mixin footer()
+mixin footer(btn)
 	+b.FOOTER.footer.block-with-lazy
 		.container
 			.row
-				.col-auto.d-md-block.d-none
+				+e.col.col-auto.d-md-block.d-none
 					a(href="/")
 						img(src="img/svg/logo-foot.svg", alt="")
 				.col
 					+mnu()
 
 					+e.copy.d-none.d-md-block (c) PlanDo 2020-2021 
-				.col-auto
+				+e.col.col-auto
 					+soc()
 				.w-100.d-md-none
 				.col.d-md-none.align-self-center
 					+e.copy (c) PlanDo 2020-2021 
+	if btn
 		+b.fixed-btn
 			+e.btn.btn-outline-l(href="#") Далее
 				+icon('arrow-r')

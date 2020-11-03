@@ -4,51 +4,52 @@ mixin sBasket()
 		.container
 			+b.section-title.text-center
 				h1 Ваш заказ
-			-
-				const items = [
-					{
-						i:'step-1-2.png',
-						t:'Обложка "Light blue"',
-						count:'13',
-						pr:"430 ₽"
-					},
-					
-					{
-						i:'step-2-1.png',
-						t:'Название блока, пример в две строки',
-						count:'13',
-						pr:"5 590 ₽"
-					},
-					{
-						i:'step-2-1.png',
-						t:'Обложка "Light blue"',
-						count:'13',
-						pr:"430 ₽",
-						 
-					},
-					{
-						i:'step-2-1.png',
-						t:'Обложка "Light blue"',
-						count:'1',
-						pr:"430 ₽",
-						 
-					},
+			div
+				-
+					const items = [
+						{
+							i:'step-1-2.png',
+							t:'Обложка "Light blue"',
+							count:'13',
+							pr:"430 ₽"
+						},
+						
+						{
+							i:'step-2-1.png',
+							t:'Название блока, пример в две строки',
+							count:'13',
+							pr:"5 590 ₽"
+						},
+						{
+							i:'step-2-1.png',
+							t:'Обложка "Light blue"',
+							count:'13',
+							pr:"430 ₽",
+							
+						},
+						{
+							i:'step-2-1.png',
+							t:'Обложка "Light blue"',
+							count:'1',
+							pr:"430 ₽",
+							
+						},
 
-				]
-			each item in items
-				+e.item
-					+e.img-wrap(hrerf="#")
-						+pic(item.i)
-					.row
-						+e.title.col-md= item.t
-						.col-auto
-							+b.add-block
-								input(type="text" value= item.count)
-								+e.btn--plus
-								+e.btn--minus
-						+e.price.col-auto= item.pr 
-					+e.close
-						+icon("close")
+					]
+				each item in items
+					+e.item
+						+e.img-wrap(hrerf="#")
+							+pic(item.i)
+						.row
+							+e.title.col-md= item.t
+							.col-auto
+								+b.add-block
+									input(type="text" value= item.count)
+									+e.btn--plus
+									+e.btn--minus
+							+e.price.col-auto= item.pr 
+						+e.close
+							+icon("close")
 			+e.total
 				.row.h5.fw-300
 					.col Товары: 

@@ -1,8 +1,9 @@
 .footer {
-		
+	position: relative;
+	z-index: 201;
 	margin-top: auto;
 	background: #3FA5AA;
-	padding: rem(30) 0 rem(60);
+	padding: rem(40) 0 rem(60);
 	.navMenu__link{
 		color: #ffffff !important;
 		padding-left: 0;
@@ -24,6 +25,8 @@
 		@include media-breakpoint-up(md) {
 
 			text-align: center;
+			padding-top: rem(15);
+			font-size: rem(13);
 		}
 			color: rgba(255, 255, 255, 0.6);
 

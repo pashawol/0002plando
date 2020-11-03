@@ -9,7 +9,9 @@
 		vertical-align: middle;
 		@include mt;
 		display: block;
-		@extend .btn-outline-l;
+		// @extend .btn-outline-l;
+		background: rgba(255, 255, 255, 0.07);
+		border: 1px solid rgba(255, 255, 255, 0.5);
 		box-sizing: border-box;
 		border-radius: 10px;
 		height: rem(47);
@@ -17,7 +19,15 @@
 		display: flex;
 		justify-content: center;
 		align-items: center; 
-		color: #ffffff; 
+		color: #ffffff !important; 
+		&:hover{
+			background: rgba(255, 255, 255, 0.15);
+			border: 1px solid rgba(255, 255, 255, 0.6);
+		}
+		&:active{
+			background: rgba(255, 255, 255, 0.07);
+			border: 1px solid rgba(255, 255, 255, 0.5);
+		}
 	}
 	.icon{
 	font-size: rem(22);

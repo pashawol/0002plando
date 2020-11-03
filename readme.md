@@ -9,3 +9,4 @@
 1. <https://pashawol.github.io/0002plando/public/08-page-404.html>
 1. <https://pashawol.github.io/0002plando/public/09-info.html>
 1. <https://pashawol.github.io/0002plando/public/10-order.html>
+1. <https://pashawol.github.io/0002plando/public/00.html>

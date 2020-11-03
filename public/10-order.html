@@ -73,13 +73,13 @@
 						<input class="utm_term" type="hidden" name="utm_term"/>
 						<input class="utm_medium" type="hidden" name="utm_medium"/>
 						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-						<div class="form-wrap__group">
+						<div class="form-wrap__group form-wrap__group--head">
 							<div class="form-wrap__group-text">Введите адрес своей электронной почты. На&nbsp;этот адрес будут отправляться уведомления о&nbsp;статусе заказа.
 							</div>
-							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="Ваш E-mail" name="email"/>
+							<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control mb-0" type="email" placeholder="Ваш E-mail" name="email"/>
 							</div>
 							<!-- +e.input-wrap-->
-							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text samll">Я даю согласие на <a href="#">обработку персональных данных  </a></span>
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text small">Я даю согласие на <a href="#">обработку персональных данных  </a></span>
 							</label>
 						</div>
 						<div class="form-wrap__group">
@@ -148,7 +148,7 @@
 								</div>
 								<div class="col-lg-12">
 									<div class="form-wrap__input-wrap form-group">
-										<label><span class="form-wrap__title">Улица, дом, квартира</span><input class="form-wrap__input form-control" type="text" placeholder="Адрес" name="text"/> 
+										<label><span class="form-wrap__title">Адрес</span><input class="form-wrap__input form-control" type="text" placeholder="Улица, дом, квартира" name="text"/> 
 										</label> 
 									</div>
 									<!-- +e.input-wrap-->
@@ -204,7 +204,7 @@
 							</label> 
 						</div>
 						<!-- +e.input-wrap-->
-						<button class="btn btn-primary px-5" type="submit">Перейти к оплате</button>
+						<button class="btn btn-primary px-4" type="submit">Перейти к оплате</button>
 					</form>
 				</div>
 			</div>
@@ -213,7 +213,8 @@
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<div class="row">
-					<div class="col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a></div>
+					<div class="footer__col col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a>
+					</div>
 					<div class="col">
 						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обзор планера</a>
@@ -228,7 +229,7 @@
 						<div class="footer__copy d-none d-md-block">(c) PlanDo 2020-2021 
 						</div>
 					</div>
-					<div class="col-auto">
+					<div class="footer__col col-auto">
 						<div class="soc"><a class="soc__item" href="#" target="_blank">
 							<svg class="icon icon-instagram ">
 								<use xlink:href="img/svg/sprite.svg#instagram"></use>
@@ -241,11 +242,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="fixed-btn"><a class="fixed-btn__btn btn-outline-l" href="#">Далее
-				<svg class="icon icon-arrow-r ">
-					<use xlink:href="img/svg/sprite.svg#arrow-r"></use>
-				</svg></a><br/><a class="fixed-btn__btn btn-outline mt-3" href="#">Назад</a>
 			</div>
 		</footer>
 		<!--  start modals-->

@@ -1,6 +1,11 @@
 
 	// start .sOrder
 	.sOrder {
+		@include media-breakpoint-up(lg) {
+			--sPT: #{rem(106)};
+			--sPB: #{rem(106)};
+			--sTPB: #{rem(46)};
+		}
 		 .form-wrap{
 			 margin-left: auto;
 			 margin-right: auto;
