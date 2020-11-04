@@ -29,7 +29,8 @@
 		<div class="top-nav block-with-lazy">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-auto col"><a href="/"><img class="res-i" src="img/svg/logo.svg" alt=""/></a></div>
+					<div class="col-md-auto col"><a class="top-nav__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt=""/></a>
+					</div>
 					<div class="col-md order-md-0 order-last">
 						<div class="menu-wrap">
 							<div class="container">
@@ -65,7 +66,7 @@
 				<h1>Конструктор планеров</h1>
 				<div class="headerBlock__text">Создай свой планер (ежедневник) на&nbsp;пружине за&nbsp;1290&nbsp;₽ исходя из&nbsp;своих задач и&nbsp;добивайся результатов быстрее! 
 				</div>
-				<div class="row d-none d-sm-flex">
+				<div class="row">
 							<div class="headerBlock__col col-md-3 col-sm-6">
 								<div class="headerBlock__item">
 									<div class="headerBlock__step">шаг 1
@@ -130,86 +131,6 @@
 									</div>
 								</div>
 							</div>
-				</div>
-				<div class="d-sm-none">
-					<div class="headerBlock__slider headerBlock__slider--js swiper-container">
-						<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
-							<svg class="icon icon-chevron-left ">
-								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
-							</svg>
-						</div>
-						<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
-							<svg class="icon icon-chevron-right ">
-								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
-							</svg>
-						</div>
-						<div class="swiper-wrapper">
-								<div class="headerBlock__slide swiper-slide">
-									<div class="headerBlock__item">
-										<div class="headerBlock__step">шаг 1
-										</div>
-										<div class="headerBlock__title">Обложка
-										</div>
-										<div class="headerBlock__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source srcset="img/@2x/webp/head-img-1.webp" type="image/webp"/>
-												<noscript class="loading-lazy"><img src="img/@2x/head-img-1.png" alt=""/></noscript>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
-								</div>
-								<div class="headerBlock__slide swiper-slide">
-									<div class="headerBlock__item">
-										<div class="headerBlock__step">шаг 2
-										</div>
-										<div class="headerBlock__title">Интерактивный блок
-										</div>
-										<div class="headerBlock__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source srcset="img/@2x/webp/head-img-2.webp" type="image/webp"/>
-												<noscript class="loading-lazy"><img src="img/@2x/head-img-2.png" alt=""/></noscript>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
-								</div>
-								<div class="headerBlock__slide swiper-slide">
-									<div class="headerBlock__item">
-										<div class="headerBlock__step">шаг 3
-										</div>
-										<div class="headerBlock__title">Блок планирования
-										</div>
-										<div class="headerBlock__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source srcset="img/@2x/webp/head-img-3.webp" type="image/webp"/>
-												<noscript class="loading-lazy"><img src="img/@2x/head-img-3.png" alt=""/></noscript>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
-								</div>
-								<div class="headerBlock__slide swiper-slide">
-									<div class="headerBlock__item">
-										<div class="headerBlock__step">шаг 4
-										</div>
-										<div class="headerBlock__title">Вспомогательный блок
-										</div>
-										<div class="headerBlock__img-wrap">
-											<!-- picture-->
-											<picture> 
-												<source srcset="img/@2x/webp/head-img-4.webp" type="image/webp"/>
-												<noscript class="loading-lazy"><img src="img/@2x/head-img-4.png" alt=""/></noscript>
-											</picture>
-											<!-- /picture-->
-										</div>
-									</div>
-								</div>
-						</div>
-					</div>
 				</div>
 				<div class="headerBlock__footer">Выбери интересующий блок нажатием на кнопку «Выбрать». Чтобы перейти к следующему шагу, нажми кнопку «Далее».
 				</div>
@@ -367,9 +288,8 @@
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<div class="row">
-					<div class="footer__col col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a>
-					</div>
-					<div class="col">
+					<div class="col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a></div>
+					<div class="footer__col col">
 						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обзор планера</a>
 							</li>
@@ -383,7 +303,7 @@
 						<div class="footer__copy d-none d-md-block">(c) PlanDo 2020-2021 
 						</div>
 					</div>
-					<div class="footer__col col-auto">
+					<div class="col-auto">
 						<div class="soc"><a class="soc__item" href="#" target="_blank">
 							<svg class="icon icon-instagram ">
 								<use xlink:href="img/svg/sprite.svg#instagram"></use>

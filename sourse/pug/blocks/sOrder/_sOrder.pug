@@ -35,31 +35,32 @@ mixin sOrder(data)
 				+e.group
 					+e.group-title Способ доставки
 					+e.group-text Для Вашего региона доступны следующие способы доставки:
-					+in-c('radio')
-						span.row
-							.col
-								+e.title.d-block Россия, Беларусь, Украина
-								.small.fw-300 От 17-24 рабочих дней
-							span.col-auto.h6 1 000 ₽ 
-					
-					+in-c('radio')
-						span.row
-							.col
-								+e.title.d-block Другие страны
-								.small.fw-300 От 17-24 рабочих дней
-							span.col-auto.h6 1 085 ₽ 
-					+in-c('radio')
-						span.row
-							.col
-								+e.title.d-block СДЭК курьером до двери
-								.small.fw-300 До 5-7 рабочих дней
-							span.col-auto.h6 1 000 ₽ 
-					+in-c('radio')
-						span.row
-							.col
-								+e.title.d-block СДЭК до склада
-								.small.fw-300 до&nbsp;4-6 рабочих дней. Выберем ближайший к&nbsp;вам пункт выдачи. В&nbsp;комментариях далее можете указать другой.
-							span.col-auto.h6 800 ₽ 
+					+e.radio-block
+						+in-c('radio')
+							span.row
+								.col
+									+e.title.d-block Россия, Беларусь, Украина
+									.small.fw-300 От 17-24 рабочих дней
+								span.col-auto.h6 1 000 ₽ 
+						
+						+in-c('radio')
+							span.row
+								.col
+									+e.title.d-block Другие страны
+									.small.fw-300 От 17-24 рабочих дней
+								span.col-auto.h6 1 085 ₽ 
+						+in-c('radio')
+							span.row
+								.col
+									+e.title.d-block СДЭК курьером до двери
+									.small.fw-300 До 5-7 рабочих дней
+								span.col-auto.h6 1 000 ₽ 
+						+in-c('radio')
+							span.row
+								.col
+									+e.title.d-block СДЭК до склада
+									.small.fw-300 до&nbsp;4-6 рабочих дней. Выберем ближайший к&nbsp;вам пункт выдачи. В&nbsp;комментариях далее можете указать другой.
+								span.col-auto.h6 800 ₽ 
 
 				+e.group
 					+e.group-title Способ оплаты
@@ -75,6 +76,7 @@ mixin sOrder(data)
 						+icon("lock")
 						p После нажатия кнопки Перейти к&nbsp;оплате вы&nbsp;будете перенаправлены на&nbsp;сайт платежной системы Webpay, надежного оператора, осуществляющего тысячи платежных операций ежедневно.
 						p Сохранность Ваших платежных данных гарантируется международным стандартом безопасности при работе с&nbsp;платежными карточками PCI&nbsp;DSS.
-				+input('Ваш комментарий ... ','textarea','Комментарий к заказу') 
+				+input('Ваш комментарий ... ','textarea','Комментарий к заказу')
+				br
 				button.btn.btn-primary.px-4(type='submit') Перейти к оплате
 	// end sOrder

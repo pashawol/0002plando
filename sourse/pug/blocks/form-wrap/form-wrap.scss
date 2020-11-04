@@ -91,7 +91,28 @@
 				display: block;
 
 			}
-	 }
+	}
+	&__radio-block{
+		.row{
+			@include media-breakpoint-up(sm) {
+
+				align-items: center;
+			}
+		}
+		.col-auto.h6{
+			@include media-breakpoint-down(sm) {
+				padding-top: rem(12);
+		}
+		}
+		.custom-input__lab {
+			@include media-breakpoint-up(sm) {
+
+				top: 50%;
+				margin-top: rem(-12);
+			}
+			top: rem(12);
+		}
+	}
 }
 
 textarea{
@@ -177,9 +198,9 @@ textarea{
 	&__lab{
 		left: 0;
 		display: block;
-		top: rem(3); 
-		width: rem(20px);
-		height: rem(20px);
+		top: rem(6); 
+		width: rem(16px);
+		height: rem(16px);
 		background-color: #ffffff;
 		border: 1px solid rgba(32, 36, 36, 0.3);
 		
@@ -217,6 +238,8 @@ textarea{
 		border-radius: 50%;
 		background-color: #ffffff;
 		border: 1px solid rgba(32, 36, 36, 0.3);
+		width: rem(18);
+		height: rem(18);
 		&::after{ 
 			border-radius: 50%;
 		}

@@ -29,7 +29,8 @@
 		<div class="top-nav block-with-lazy">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-auto col"><a href="/"><img class="res-i" src="img/svg/logo.svg" alt=""/></a></div>
+					<div class="col-md-auto col"><a class="top-nav__logo" href="/"><img class="res-i" src="img/svg/logo.svg" alt=""/></a>
+					</div>
 					<div class="col-md order-md-0 order-last">
 						<div class="menu-wrap">
 							<div class="container">
@@ -160,26 +161,28 @@
 							</div>
 							<div class="form-wrap__group-text">Для Вашего региона доступны следующие способы доставки:
 							</div>
-							<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
-									<div class="col"><span class="custom-input__title d-block">Россия, Беларусь, Украина</span>
-										<div class="small fw-300">От 17-24 рабочих дней</div>
-									</div><span class="col-auto h6">1 000 ₽ </span></span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
-									<div class="col"><span class="custom-input__title d-block">Другие страны</span>
-										<div class="small fw-300">От 17-24 рабочих дней</div>
-									</div><span class="col-auto h6">1 085 ₽ </span></span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
-									<div class="col"><span class="custom-input__title d-block">СДЭК курьером до двери</span>
-										<div class="small fw-300">До 5-7 рабочих дней</div>
-									</div><span class="col-auto h6">1 000 ₽ </span></span>
-							</label>
-							<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
-									<div class="col"><span class="custom-input__title d-block">СДЭК до склада</span>
-										<div class="small fw-300">до&nbsp;4-6 рабочих дней. Выберем ближайший к&nbsp;вам пункт выдачи. В&nbsp;комментариях далее можете указать другой.</div>
-									</div><span class="col-auto h6">800 ₽ </span></span>
-							</label>
+							<div class="form-wrap__radio-block">
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
+										<div class="col"><span class="custom-input__title d-block">Россия, Беларусь, Украина</span>
+											<div class="small fw-300">От 17-24 рабочих дней</div>
+										</div><span class="col-auto h6">1 000 ₽ </span></span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
+										<div class="col"><span class="custom-input__title d-block">Другие страны</span>
+											<div class="small fw-300">От 17-24 рабочих дней</div>
+										</div><span class="col-auto h6">1 085 ₽ </span></span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
+										<div class="col"><span class="custom-input__title d-block">СДЭК курьером до двери</span>
+											<div class="small fw-300">До 5-7 рабочих дней</div>
+										</div><span class="col-auto h6">1 000 ₽ </span></span>
+								</label>
+								<label class="custom-input"><input class="custom-input__input" type="radio" name="radio"/><span class="custom-input__lab"></span><span class="row">
+										<div class="col"><span class="custom-input__title d-block">СДЭК до склада</span>
+											<div class="small fw-300">до&nbsp;4-6 рабочих дней. Выберем ближайший к&nbsp;вам пункт выдачи. В&nbsp;комментариях далее можете указать другой.</div>
+										</div><span class="col-auto h6">800 ₽ </span></span>
+								</label>
+							</div>
 						</div>
 						<div class="form-wrap__group">
 							<div class="form-wrap__group-title">Способ оплаты
@@ -200,10 +203,10 @@
 							</div>
 						</div>
 						<div class="form-wrap__input-wrap form-group">
-							<label><span class="form-wrap__title">Комментарий к заказу</span><textarea class="form-wrap__input form-control" placeholder="Ваш комментарий ... " name="textarea"></textarea> 
-							</label> 
+							<label><span class="form-wrap__title">Комментарий к заказу</span><textarea class="form-wrap__input form-control" placeholder="Ваш комментарий ... " name="textarea"></textarea>
+							</label>
 						</div>
-						<!-- +e.input-wrap-->
+						<!-- +e.input-wrap--><br/>
 						<button class="btn btn-primary px-4" type="submit">Перейти к оплате</button>
 					</form>
 				</div>
@@ -213,9 +216,8 @@
 		<footer class="footer block-with-lazy">
 			<div class="container">
 				<div class="row">
-					<div class="footer__col col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a>
-					</div>
-					<div class="col">
+					<div class="col-auto d-md-block d-none"><a href="/"><img src="img/svg/logo-foot.svg" alt=""/></a></div>
+					<div class="footer__col col">
 						<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 							<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Обзор планера</a>
 							</li>
@@ -229,7 +231,7 @@
 						<div class="footer__copy d-none d-md-block">(c) PlanDo 2020-2021 
 						</div>
 					</div>
-					<div class="footer__col col-auto">
+					<div class="col-auto">
 						<div class="soc"><a class="soc__item" href="#" target="_blank">
 							<svg class="icon icon-instagram ">
 								<use xlink:href="img/svg/sprite.svg#instagram"></use>

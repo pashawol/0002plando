@@ -5,6 +5,23 @@
 	--sPB: #{rem(30)};
 	position: relative;
 	overflow: hidden;
+	.container{
+		position: relative;
+		--sp: calc(100% + 92px);
+		&::before,
+		&::after{
+			content: url(../img/svg/dots.svg);
+			position: absolute;
+		}
+		&::before{
+			right: var(--sp);
+			top: 0;
+		}
+		&::after{
+			left: var(--sp);
+			bottom: rem(50);
+		}
+	}
 	h1{
 		font-weight: bold;
 		margin-bottom: rem(15);
@@ -41,8 +58,19 @@
 				@include tear(rem(190));
 				// margin-left: rem(-20);
 			}
-		margin-top: rem(-10);
+		margin-top: rem(-15);
 		z-index: -1;
+		&::before{
+			content: '';
+			// position: absolute;
+			@include a-cent1;
+			width: 100%;
+			height: 90%;
+			border-radius: 50%;
+			background: rgba(88, 247, 255, 0.6);
+			filter: blur(175px);
+			z-index: -1;
+		}
 	}
 	&__col:nth-child(1) &__img-wrap{
 		@include media-breakpoint-up(xxl){
@@ -120,7 +148,7 @@
 	}
 	
 	&__col{
-		margin-bottom: rem(50);
+		margin-bottom: rem(45);
 		@include media-breakpoint-up(xxl){
 			// margin-bottom: rem(-100);
 		}
@@ -182,6 +210,21 @@
 					// bottom: rem(-60);
 				right: rem(-50);
 			}
+		}
+	}
+	@include media-breakpoint-up(xl){
+
+		&__col:nth-child(2) &__caption{
+			position: relative;
+			left: rem(-60);
+		}
+		&__col:nth-child(3) &__caption{
+			position: relative;
+			left: rem(-10);
+		}
+		&__col:nth-child(4) &__caption{
+			position: relative;
+			left: rem(30);
 		}
 	}
 

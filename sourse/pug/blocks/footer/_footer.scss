@@ -3,7 +3,13 @@
 	z-index: 201;
 	margin-top: auto;
 	background: #3FA5AA;
-	padding: rem(40) 0 rem(60);
+	padding: rem(40) 0 rem(70);
+	.navMenu{
+			@include media-breakpoint-up(xl) {
+
+				--bs-gutter-x: #{rem(65)};
+			}
+	}
 	.navMenu__link{
 		color: #ffffff !important;
 		padding-left: 0;
@@ -36,6 +42,10 @@
 	}
 	.soc{
 		padding-top: rem(10);
+	}
+	&__col{
+		
+		padding-right: 50px;
 	}
 // 
 @include media-breakpoint-up(xl) {

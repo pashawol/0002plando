@@ -2,14 +2,14 @@ mixin footer(btn)
 	+b.FOOTER.footer.block-with-lazy
 		.container
 			.row
-				+e.col.col-auto.d-md-block.d-none
+				.col-auto.d-md-block.d-none
 					a(href="/")
 						img(src="img/svg/logo-foot.svg", alt="")
-				.col
+				+e.col.col
 					+mnu()
 
 					+e.copy.d-none.d-md-block (c) PlanDo 2020-2021 
-				+e.col.col-auto
+				.col-auto
 					+soc()
 				.w-100.d-md-none
 				.col.d-md-none.align-self-center
